@@ -9,6 +9,8 @@ import UIKit
 
 class WorldClockTableTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var timeLabelTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet var spacingConstraint: NSLayoutConstraint!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var timePeriodLabel: UILabel!
     @IBOutlet weak var timeZoneLabel: UILabel!
@@ -16,6 +18,9 @@ class WorldClockTableTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        timeLabel.backgroundColor = .systemBackground
+        timePeriodLabel.backgroundColor = .systemBackground
         // Initialization code
     }
 
@@ -24,5 +29,21 @@ class WorldClockTableTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        
+        if (self.superview as? UITableView) == nil {
+            return
+        }
+        
+        timePeriodLabel.isHidden = editing
+        timeLabel.isHidden = editing
+        spacingConstraint.isActive = !editing
+        timeLabelTrailingConstraint.constant = editing ? -40 : 0
+        
+        UIView.animate(withDuration: 0.3){
+            self.layoutIfNeeded()
+        }
+    }
 }

@@ -28,18 +28,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xda-AN-GUo">
-                                                    <rect key="frame" x="252" y="29.666666666666664" width="121" height="71.666666666666686"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QI-kp-1cs">
-                                                    <rect key="frame" x="185" y="54.333333333333343" width="59" height="40.666666666666657"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ytW-KO-hkt">
                                                     <rect key="frame" x="20.000000000000007" y="45.333333333333343" width="88.666666666666686" height="46.666666666666657"/>
                                                     <subviews>
@@ -57,6 +45,18 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xda-AN-GUo">
+                                                    <rect key="frame" x="252" y="29.666666666666664" width="121" height="71.666666666666686"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QI-kp-1cs">
+                                                    <rect key="frame" x="185" y="54.333333333333343" width="59" height="40.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="5Iw-5A-9aG" firstAttribute="baseline" secondItem="5QI-kp-1cs" secondAttribute="baseline" id="3xf-FV-guU"/>
@@ -71,7 +71,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="spacingConstraint" destination="WKa-Py-hVb" id="8Lo-K5-MvS"/>
                                             <outlet property="timeLabel" destination="xda-AN-GUo" id="EdF-l4-iU4"/>
+                                            <outlet property="timeLabelTrailingConstraint" destination="cr4-bn-VWl" id="oOV-Jj-hUK"/>
                                             <outlet property="timeOffsetLabel" destination="jAW-zT-BT6" id="LUV-Iu-T1e"/>
                                             <outlet property="timePeriodLabel" destination="5QI-kp-1cs" id="QYC-9c-GuY"/>
                                             <outlet property="timeZoneLabel" destination="5Iw-5A-9aG" id="NiX-VJ-2fm"/>
@@ -99,7 +101,7 @@
                                 <rect key="frame" x="16" y="4.6666666666666679" width="87" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ZKk-SH-yMO">

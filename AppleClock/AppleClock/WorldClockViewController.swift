@@ -73,4 +73,11 @@ extension WorldClockViewController: UITableViewDataSource {
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+    
+    // 이메소드를 쓰면 리오더 기능이 추가됨 밑에 두줄은 이 변경사항 저장하기 위함.
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let target = list.remove(at: sourceIndexPath.row)
+        
+        list.insert(target, at: destinationIndexPath.row)
+    }
 }

@@ -125,6 +125,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="발견된 결과 없음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCs-Kd-qZQ">
+                                <rect key="frame" x="140.66666666666666" y="410.66666666666669" width="112" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ffl-2W-MRt">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -156,15 +162,17 @@
                         <viewLayoutGuide key="safeArea" id="QQL-1y-SmJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="yCs-Kd-qZQ" firstAttribute="centerX" secondItem="0dI-Xf-JpQ" secondAttribute="centerX" id="4Jf-8r-FgG"/>
                             <constraint firstItem="ffl-2W-MRt" firstAttribute="trailing" secondItem="QQL-1y-SmJ" secondAttribute="trailing" id="9y7-7Q-arD"/>
                             <constraint firstItem="ffl-2W-MRt" firstAttribute="leading" secondItem="QQL-1y-SmJ" secondAttribute="leading" id="HIz-wJ-iDH"/>
                             <constraint firstItem="ffl-2W-MRt" firstAttribute="bottom" secondItem="QQL-1y-SmJ" secondAttribute="bottom" id="bpb-AE-ec8"/>
                             <constraint firstItem="ffl-2W-MRt" firstAttribute="top" secondItem="0dI-Xf-JpQ" secondAttribute="top" id="nWR-52-68f"/>
+                            <constraint firstItem="yCs-Kd-qZQ" firstAttribute="centerY" secondItem="0dI-Xf-JpQ" secondAttribute="centerY" id="wHn-es-MoB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" prompt="도시 추가" id="NZn-hY-LbM"/>
                     <connections>
-                        <outlet property="CityTableView" destination="ffl-2W-MRt" id="2g5-CJ-1TU"/>
+                        <outlet property="cityTableView" destination="ffl-2W-MRt" id="2g5-CJ-1TU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysX-ad-DOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

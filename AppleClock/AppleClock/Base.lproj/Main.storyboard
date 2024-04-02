@@ -104,6 +104,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ZKk-SH-yMO">
                             <color key="tintColor" systemColor="systemOrangeColor"/>
+                            <connections>
+                                <segue destination="2eM-Db-tOQ" kind="presentation" id="Qlz-P0-QlW"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -113,6 +116,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abf-aa-TQN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-327.48091603053433" y="419.71830985915494"/>
+        </scene>
+        <!--City Selection View Controller-->
+        <scene sceneID="1bt-SS-dv6">
+            <objects>
+                <viewController id="pVm-y8-N0a" customClass="CitySelectionViewController" customModule="AppleClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0dI-Xf-JpQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ffl-2W-MRt">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cityCell" textLabel="3sN-k9-a5v" style="IBUITableViewCellStyleDefault" id="URG-NE-FNF">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="URG-NE-FNF" id="HUZ-wT-ot9">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3sN-k9-a5v">
+                                                    <rect key="frame" x="20" y="0.0" width="353" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pVm-y8-N0a" id="qF5-na-b8m"/>
+                                    <outlet property="delegate" destination="pVm-y8-N0a" id="aUW-h7-BMA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QQL-1y-SmJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ffl-2W-MRt" firstAttribute="trailing" secondItem="QQL-1y-SmJ" secondAttribute="trailing" id="9y7-7Q-arD"/>
+                            <constraint firstItem="ffl-2W-MRt" firstAttribute="leading" secondItem="QQL-1y-SmJ" secondAttribute="leading" id="HIz-wJ-iDH"/>
+                            <constraint firstItem="ffl-2W-MRt" firstAttribute="bottom" secondItem="QQL-1y-SmJ" secondAttribute="bottom" id="bpb-AE-ec8"/>
+                            <constraint firstItem="ffl-2W-MRt" firstAttribute="top" secondItem="0dI-Xf-JpQ" secondAttribute="top" id="nWR-52-68f"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" prompt="도시 추가" id="NZn-hY-LbM"/>
+                    <connections>
+                        <outlet property="CityTableView" destination="ffl-2W-MRt" id="2g5-CJ-1TU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ysX-ad-DOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1544.2748091603053" y="419.71830985915494"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9ji-9l-Tza">
@@ -151,18 +208,36 @@
             </objects>
             <point key="canvasLocation" x="-1254.1984732824426" y="419.71830985915494"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c9j-bi-MMA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2eM-Db-tOQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8d9-Ow-ayH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pVm-y8-N0a" kind="relationship" relationship="rootViewController" id="bYy-Ih-d4b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zex-9O-OfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617.55725190839689" y="419.71830985915494"/>
+        </scene>
     </scenes>
     <color key="tintColor" systemColor="systemOrangeColor"/>
     <resources>
         <image name="globe" catalog="system" width="128" height="123"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

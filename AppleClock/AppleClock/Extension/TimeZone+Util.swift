@@ -47,7 +47,7 @@ extension TimeZone {
         
         // 센세 코드
         let city = identifier.components(separatedBy: "/").last
-        return city
+        return city?.replacingOccurrences(of: "_", with: " ")
         
     }
     

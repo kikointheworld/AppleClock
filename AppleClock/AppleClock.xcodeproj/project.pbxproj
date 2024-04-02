@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E90198C52BBC37C3003283D1 /* String+Hangeul.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90198C42BBC37C3003283D1 /* String+Hangeul.swift */; };
+		E90198C72BBC6CFE003283D1 /* Date+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90198C62BBC6CFE003283D1 /* Date+Util.swift */; };
 		E9F0C6C22BBB004800841C19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F0C6C12BBB004800841C19 /* AppDelegate.swift */; };
 		E9F0C6C42BBB004800841C19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F0C6C32BBB004800841C19 /* SceneDelegate.swift */; };
 		E9F0C6C92BBB004800841C19 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E9F0C6C82BBB004800841C19 /* Base */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		E90198C42BBC37C3003283D1 /* String+Hangeul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hangeul.swift"; sourceTree = "<group>"; };
+		E90198C62BBC6CFE003283D1 /* Date+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Util.swift"; sourceTree = "<group>"; };
 		E9F0C6BE2BBB004800841C19 /* AppleClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F0C6C12BBB004800841C19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9F0C6C32BBB004800841C19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				E9F0C6DB2BBB181800841C19 /* TimeZone+Util.swift */,
 				E90198C42BBC37C3003283D1 /* String+Hangeul.swift */,
+				E90198C62BBC6CFE003283D1 /* Date+Util.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E90198C52BBC37C3003283D1 /* String+Hangeul.swift in Sources */,
+				E90198C72BBC6CFE003283D1 /* Date+Util.swift in Sources */,
 				E9F0C6DC2BBB181800841C19 /* TimeZone+Util.swift in Sources */,
 				E9F0C6D92BBB0CB900841C19 /* WorldClockTableTableViewCell.swift in Sources */,
 				E9F0C6D62BBB03C200841C19 /* WorldClockViewController.swift in Sources */,
